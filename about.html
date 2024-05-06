@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kate Ann Cui Supilanas | Professional Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0056b3;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    /* Header */
+header {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: headerSlideIn 0.5s ease-in-out;
+  transition: background-color 0.3s ease;
+}
+
+@keyframes headerSlideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to right, #ff6b6b, #8806ce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: text-shadow 0.3s ease;
+}
+
+.logo a:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 2rem;
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffa500;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffa500;
+}
+
+nav ul li a:hover:before {
+  transform: scaleX(1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  z-index: 101;
+  transition: transform 0.3s ease;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 0.8rem;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  padding: 2rem 0;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+nav ul.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+nav ul li {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+nav ul.active li {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+nav ul.active li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+nav ul.active li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+nav ul.active li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+nav ul.active li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+nav ul li a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 2rem;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a:hover:before {
+  width: calc(100% - 4rem);
+}
+
+.hamburger {
+  display: block;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+}
+
+/* Main Content */
+main {
+  padding-top: 6rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.hero-content,
+.about-content,
+.projects-content,
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero Section */
+#hero {
+  background-image: linear-gradient(to right, #007bff, #00b8d4);
+  color: #fff;
+  padding: 12rem 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  animation: heroTitleFadeIn 1s ease-in-out;
+}
+
+@keyframes heroTitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content p {
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+  animation: heroDescFadeIn 1s ease-in-out 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes heroDescFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #007bff;
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  animation: heroButtonFadeIn 1s ease-in-out 1s;
+  animation-fill-mode: both;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes heroButtonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroImageZoomIn 10s ease-in-out infinite alternate;
+}
+
+@keyframes heroImageZoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+/* About Section */
+#about {
+  background-color: #fff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 0 0 50%;
+  padding-right: 3rem;
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionTitleFadeIn 1s ease-in-out forwards;
+}
+
+.about-text h3 {
+    font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionTitleFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes sectionTitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionDescFadeIn 1s ease-in-out 1s forwards;
+}
+
+@keyframes sectionDescFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text .btn {
+  animation: sectionButtonFadeIn 1s ease-in-out 1.5s forwards;
+}
+
+@keyframes sectionButtonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-image {
+  flex: 0 0 40%;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: aboutImageFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes aboutImageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f5f5f5;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionTitleFadeIn 1s ease-in-out forwards;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: formFadeIn 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes formFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form input,
+form textarea {
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+form button {
+  align-self: flex-end;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 0.8rem;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  background-color: #333;
+  padding: 2rem 0;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+nav ul.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+nav ul li {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+nav ul li a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 2rem;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a:hover:before {
+  width: calc(100% - 4rem);
+}
+
+.hamburger {
+  display: block;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .about-text h2,
+  .projects-content h2,
+  .contact-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-text p,
+  .project-card p,
+  form input,
+  form textarea {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  color: #fff;
+  padding: 4rem 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.social-icons a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.social-icons a:hover::before {
+  width: 100%;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+
+/* Duty Section */
+#duty {
+  background-color: #f5f5f5;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.duty-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.duty-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionTitleFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes sectionTitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.duty-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionDescFadeIn 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes sectionDescFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.favorite-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.favorite-item {
+  margin: 1rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: favoriteItemFadeIn 1s ease-in-out 1s forwards;
+}
+
+@keyframes favoriteItemFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.favorite-item h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.color-boxes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.color-box:hover {
+  transform: scale(1.1);
+}
+
+.purple {
+  background-color: #8806ce;
+}
+
+.black {
+  background-color: #000;
+}
+
+.white {
+  background-color: #fff;
+  color: #333;
+}
+
+.rapunzel-image {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: rapunzelImageFadeIn 1s ease-in-out 1.5s forwards;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+@keyframes rapunzelImageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.duty-content h3:last-of-type {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionTitleFadeIn 1s ease-in-out 2s forwards;
+}
+
+.religion-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 300px;
+  margin: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: cardFadeIn 1s ease-in-out 2.5s forwards;
+}
+
+@keyframes cardFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portrait img {
+  width: 100%;
+  height: auto;
+}
+
+.landscape img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+.image-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 1rem;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 0 1rem 1rem;
+  line-height: 1.5;
+}
+
+
+
+/* Apply styles to the section titles */
+.section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: sectionTitleFadeIn 1s ease-in-out forwards;
+    }
+
+
+
+
+    /* MCGI Paragraph Styles */
+.about-text .mcgi {
+  margin-top: 2.5rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionDescFadeIn 1s ease-in-out 1.7s forwards;
+}
+
+.about-text .mcgi h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionTitleFadeIn 1s ease-in-out 1.7s forwards;
+}
+
+.about-text .mcgi p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionDescFadeIn 1s ease-in-out 2s forwards;
+}
+
+@keyframes sectionTitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sectionDescFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+</style>
+<header>
+    <nav>
+      <div class="logo">
+        <a href="#">Kate Ann Cui Supilanas</a>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="index.html">Contact</a></li>
+      </ul>
+      <button class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </nav>
+  </header>
+
+
+
+<section id="about">
+  <div class="about-content">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Hello, I'm Kate Ann Cui Supilanas, I'm 17 years old and I live in San Jose Del Monte Heights, Bulacan. My hobby is watching K-dramas before prioritizing my activities and homework for school. I also like to read on the Wattpad app and I also became a writer there hehe just sharing. My favorite color is Violet, Why? maybe because my childhood movie is Sofia the First, maybe just copying like that so it became my favorite too. Just kidding. <br>
+        <br> Five facts about me:
+        First: I'm sweet. I love taking photos during sunset or when it's sunny, moon meet sun and all that.
+        Second: Moody. Sometimes hyper, sometimes just quiet on the side.
+        Third: Loving and caring, yes HAHAHA.
+        Fourth: I love to cook, just kidding, but I really do love to cook when I feel like it.
+        Fifth: Sometimes lazy. I'm proud to be lazy, just kidding, no one likes lazy people, but I just put that there because that's how I am sometimes. </br>
+        <br>I am friendly but it depends on the vibes and humor of the person. I am approachable too, if you talk to me first, I'll talk back. I think we would be good as friends though. I eat what I want instead of always worrying about my weight. And I play music the way I want, despite its high and mighty directives. My music taste is really from the 80s and 90s, as they say, old but gold. My motto in life is "everything can be done with His help and mercy."</br></p>
+    </div>
+</section>
+
+<!-- Duty Section -->
+<section id="duty">
+    <div class="duty-content">
+        <h2>My Duties</h2>
+        <p>As a member of TK (Christian Theater) and GCO (Guest Coordinator), it is my duty to serve God and strengthen my duty. I will continue with the help and mercy of God.</p>
+        <div class="image-cards">
+          <div class="card">
+            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/439497444_397573356591527_6191535328504933594_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHRTShwZ7-WpB33ztxFkA7nb8AAwdhPXPZvwADB2E9c9g8nNrRqK0uxeTSF_ZEVzYrmFoW7IYUUH9HRF_rrVkor&_nc_ohc=Krp1U8UNGUUQ7kNvgHM4MpJ&_nc_ht=scontent.fmnl17-1.fna&oh=03_Q7cD1QFz0zAWODtX_Pokdg8lPhC-5xjngkcNKIbmDsF3LbOi2A&oe=665FCB18" alt="Duty 1">
+          </div>
+          <div class="card">
+            <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/440304929_1550065759057093_1783888226680415055_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFKM6FRudJXadtRdoaOIFRLhdutelx_Oq-F2616XH86r6UCT_QrUwN6shDY5-1nyvPVxv611l2_GGkftIY0_EUK&_nc_ohc=AuPp_qVW-tAQ7kNvgHRFbK0&_nc_ht=scontent.fmnl17-2.fna&oh=03_Q7cD1QFxKLpn5p6sEAjtjWU_jQqfe6ErIEz2xpOBE-bagLCifw&oe=665FCEA0" alt="Duty 2">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section-title">Favorite Color</div>
+      <div class="color-boxes">
+        <div class="color-box purple">Purple</div>
+        <div class="color-box black">Black</div>
+        <div class="color-box white">White</div>
+      </div>
+      <div class="section-title">Favorite Disney Princess</div>
+      <img src="https://i.pinimg.com/564x/b6/95/84/b6958476488ecb54953fccfa88f341c9.jpg" alt="Rapunzel" class="rapunzel-image">
+      <div class="section-title">My Religion</div>
+      <p>MCGI (Members Church of God International), or more commonly known as Ang Dating Daan, the overall servant is Bro. Eliseo Fernando Soriano, although Brother Eli has already passed, and the new overall servant now is Bro. Daniel Soriano Razon.</p>
+      <div class="religion-cards">
+        <div class="card portrait">
+          <img src="https://i.pinimg.com/564x/3a/94/4b/3a944be14aa30c3d3b914950a7332f34.jpg" alt="Religion 1">
+        </div>
+        <div class="card portrait">
+          <img src="https://www.mcgi.org/wp-content/uploads/2018/12/kuya-edited.jpg" alt="Religion 2">
+        </div>
+        <div class="card landscape">
+          <img src="https://www.mcgi.org/wp-content/uploads/2020/10/Members-Church-Of-God-International-Official-Logo-MCGI.org_.png" alt="Religion 3">
+        </div>
+      </div>
+    </div>
+  </section>
+
+<footer>
+  <p> Kate Ann Cui Supilanas</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/kithchen.yyy"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/kith_ahn/"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@kithskwii?lang=en"><i class="fab fa-tiktok"></i></a>
+  </div>
+</footer>
+
+<script>
+  // Get the hamburger button and the navigation menu
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav ul');
+
+  // Add a click event listener to the hamburger button
+  hamburger.addEventListener('click', () => {
+    // Toggle the 'active' class on the hamburger button
+    hamburger.classList.toggle('active');
+
+    // Toggle the 'active' class on the navigation menu
+    navMenu.classList.toggle('active');
+  });
+
+  // Add event listeners for smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Add event listener for form submission
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add your form submission logic here
+    alert('Form submitted successfully!');
+    form.reset();
+  });
+</script>

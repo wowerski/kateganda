@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kate Ann Cui Supilanas | Professional Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #0056b3;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    /* Header */
+header {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: headerSlideIn 0.5s ease-in-out;
+  transition: background-color 0.3s ease;
+}
+
+@keyframes headerSlideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to right, #ff6b6b, #8806ce);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: text-shadow 0.3s ease;
+}
+
+.logo a:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 2rem;
+  position: relative;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffa500;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffa500;
+}
+
+nav ul li a:hover:before {
+  transform: scaleX(1);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: transparent;
+  border: none;
+  z-index: 101;
+  transition: transform 0.3s ease;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 0.8rem;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  background-color: #1a1a1a;
+  padding: 2rem 0;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+nav ul.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+nav ul li {
+  margin: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+nav ul.active li {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+nav ul.active li:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+nav ul.active li:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+nav ul.active li:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+nav ul.active li:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+nav ul li a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 2rem;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a:hover:before {
+  width: calc(100% - 4rem);
+}
+
+.hamburger {
+  display: block;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+}
+
+/* Main Content */
+main {
+  padding-top: 6rem;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+.hero-content,
+.about-content,
+.projects-content,
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Hero Section */
+#hero {
+  background-image: linear-gradient(to right, #007bff, #00b8d4);
+  color: #fff;
+  padding: 12rem 0;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  animation: heroTitleFadeIn 1s ease-in-out;
+}
+
+@keyframes heroTitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content p {
+  font-size: 2rem;
+  margin-bottom: 3.5rem;
+  animation: heroDescFadeIn 1s ease-in-out 0.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes heroDescFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #007bff;
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  animation: heroButtonFadeIn 1s ease-in-out 1s;
+  animation-fill-mode: both;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes heroButtonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: heroImageZoomIn 10s ease-in-out infinite alternate;
+}
+
+@keyframes heroImageZoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+/* About Section */
+#about {
+  background-color: #fff;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 0 0 50%;
+  padding-right: 3rem;
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionTitleFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes sectionTitleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionDescFadeIn 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes sectionDescFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-text .btn {
+  animation: sectionButtonFadeIn 1s ease-in-out 1s forwards;
+}
+
+@keyframes sectionButtonFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-image {
+  flex: 0 0 40%;
+  position: relative;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: aboutImageFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes aboutImageFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f5f5f5;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: sectionTitleFadeIn 1s ease-in-out forwards;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: formFadeIn 1s ease-in-out 0.5s forwards;
+}
+
+@keyframes formFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+form input,
+form textarea {
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+form button {
+  align-self: flex-end;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    padding: 0.8rem;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  flex-direction: column;
+  background-color: #333;
+  padding: 2rem 0;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+nav ul.active {
+  max-height: 500px;
+  opacity: 1;
+}
+
+nav ul li {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+nav ul li a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+nav ul li a:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 2rem;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #007bff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a:hover:before {
+  width: calc(100% - 4rem);
+}
+
+.hamburger {
+  display: block;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.5rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-text {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .about-text h2,
+  .projects-content h2,
+  .contact-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-text p,
+  .project-card p,
+  form input,
+  form textarea {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .project-card img {
+    height: 200px;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* My Pictures Section */
+#my-pictures {
+      background-color: #fff;
+      padding: 5rem 0;
+    }
+
+    .pictures-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .pictures-content h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: sectionTitleFadeIn 1s ease-in-out forwards;
+    }
+
+    .picture-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 2rem;
+    }
+
+    .picture-card {
+      background-color: #f5f5f5;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: pictureCardFadeIn 0.8s ease-in-out forwards;
+    }
+
+    @keyframes pictureCardFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .picture-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .picture-card:hover img {
+      transform: scale(1.1);
+    }
+
+
+
+
+
+    .see-more-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.see-more-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+footer {
+  background: linear-gradient(to right, #007bff, #6610f2);
+  color: #fff;
+  padding: 4rem 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.footer-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.social-icons a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.social-icons a:hover::before {
+  width: 100%;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+<header>
+  <nav>
+    <div class="logo">
+      <a href="#">Kate Ann Cui Supilanas</a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html">About</a></li>
+      <li><a href="index.html">Contact</a></li>
+    </ul>
+    <button class="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </nav>
+</header>
+
+<section id="my-pictures">
+  <div class="pictures-content">
+    <h2>My Pictures</h2>
+    <div class="picture-grid">
+      <div class="picture-card">
+        <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t1.15752-9/440430900_1841720592997802_3774910082097328507_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGWObZr-Nd3_hAO_HWP9E6XqjgWQm4AhHCqOBZCbgCEcGjMuSWuaBcMdmJeREarij8kSryGJfrSf2RPeva7Cn7r&_nc_ohc=5CxPSjFX6hEQ7kNvgGOZ95m&_nc_ht=scontent.fmnl17-4.fna&oh=03_Q7cD1QG18n7Iv0OQQDIpoHjcB-LCP6ysZlAfIPud6xSBjhKqig&oe=665FDB3D" alt="Picture 1">
+      </div>
+      <div class="picture-card">
+        <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/437714048_933831528753356_4771168296552398632_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFAjhtNdR5HJH3w0NC0-6GKj6N8pbbU2CGPo3ylttTYId2GbomXe6vUps7x-N2BDME829PgZJJUyTEP_4nz0DWe&_nc_ohc=wPHXIFbwPgsQ7kNvgHkkKu_&_nc_ht=scontent.fmnl17-1.fna&oh=03_Q7cD1QGSJWHjBxHrVVsf0EvY-tQtWCgGMmSErGy5Xxc2iqE_Dg&oe=665FC4A2" alt="Picture 2">
+        </div>
+        <div class="picture-card">
+            <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/440239286_954716112819890_3921195820785015647_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG1_cpvndhL2WJS_7aObOmMS38ARNBe46xLfwBE0F7jrAFhT7Y-Q_mcJ1AIYe6XgTS2fBosqSz-KQH3ljctVxPP&_nc_ohc=CGNTx8tw6SUQ7kNvgEeMWV1&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QEzMOKTXataCtOmcOxjF-vSpED_0wL-7Q6LFZgNpbm4pg&oe=665FD40F" alt="Picture 2">
+            </div>
+            <div class="picture-card">
+                <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t1.15752-9/432900222_2461007040728520_8469767847122495370_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFAF9qG6dqcDMdka00Ao8MrNlDlfLoIFf82UOV8uggV_wZ3cPfa4CCaK1keAanrei1HAcCtrJzo9LLvnGEV_FND&_nc_ohc=bwmf-bGzchQQ7kNvgGhsEDw&_nc_ht=scontent.fmnl17-4.fna&oh=03_Q7cD1QEWHthSt1l1iTHmQl2uLj7e-MgeZaQvLwb8-PFCfkoJEQ&oe=665FAEA4" alt="Picture 2">
+                </div>
+                <div class="picture-card">
+                    <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/440345881_314547328335731_645876292716877283_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFroPWWA3KUkLYPY-nmHr79mR3F2sgl7n2ZHcXayCXufVuXc-_OkbHXSkU7iso8fkcrADYI4JVJZGlWtKo-_1M7&_nc_ohc=cPWJcS6M6BsQ7kNvgGGHvW9&_nc_ht=scontent.fmnl17-2.fna&oh=03_Q7cD1QEsWHoH28PeT9PaH72xAprdAdrbSaiIZeAvythOQof_WQ&oe=665FBD1C" alt="Picture 2">
+                    </div>
+                    <div class="picture-card">
+                        <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/437590519_417401274357406_2155257510464193570_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeH8YPMNHVgDjUpn_YhLwzKzy2guKhKmdvLLaC4qEqZ28s5LHEaD2x9tlC-3b0lDFdhstDr5rbIJOzcP0Md5owMH&_nc_ohc=TpB1wS4w7O8Q7kNvgExemwt&_nc_ht=scontent.fmnl17-1.fna&oh=03_Q7cD1QHXjmZD7AFr6MYcvBKMa-OI4E0XkRJDEYu9-jIoAg4a1w&oe=665FD805" alt="Picture 2">
+                        </div>
+                        <div class="picture-card">
+                            <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/439344263_971062104402579_8551513348222856949_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHQICAhHr0mNonBJ7syxlfL_2i8VBdRzvv_aLxUF1HO-7IrOrJEwG5Xmpeji5JAyZMQfgCXEsO1h62GfHIeO9gg&_nc_ohc=TWDvQ6fKs3EQ7kNvgFoaoSL&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QEsiXzcFmCOvu0lcKdj_QLLZj8W4t-QdqPP7JpbTqTt8A&oe=665FAD6C" alt="Picture 2">
+                            </div>
+                            <div class="picture-card">
+                                <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/439788268_422696600493998_5347769991657949246_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEUcHeOro3-O2kv2FJ8YPe4zxvAIP_67NzPG8Ag__rs3EGahweFrO5iCaBbZW0-BwVp-IO3Jha_65cI_2SA5Cfc&_nc_ohc=QChhu_VRDIUQ7kNvgEJOz9w&_nc_oc=Adj8AZLnWU0NrTU5Q-mF-79H2-M7X2eVc8f6YpqxOTJGi1ZJuyN70w93c2pVAOw6I6U&_nc_ht=scontent.fmnl17-1.fna&oh=03_Q7cD1QETO6oRfANb7RSdCGKiikm4EuRaaiy3MiaVVpS-uQYH9A&oe=665FCA9F" alt="Picture 2">
+                                </div>
+                                <div class="picture-card">
+                                    <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/441975354_459868826497502_8722611542678049330_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFiDaN3rvaG9wLVCw3NyT5AwHl-GBjvq4rAeX4YGO-rinoqxbYHq67ZsbTrq3S1yCQv4FjjUFEc3ds6Drnd8x2X&_nc_ohc=UJrMhd7gtL8Q7kNvgFQCTDy&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QEWxUHPDcN35Phcv0L6Dv30cFoaF7fa57gF_p7g-Dr50Q&oe=665FCA0B" alt="Picture 2">
+                                    </div>
+                                    <div class="picture-card">
+                                        <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/440465948_7569227089858829_7368858639042907781_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFuW6NmHyUYDWsSZK83X6zmwzgE62l2RkPDOATraXZGQ6YxWbx_CTm9Du1NcP9fDlXHnM3RPH-S02ngjz93QKFs&_nc_ohc=q0H2YOnaKMEQ7kNvgEsKZOE&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QGcGT3C5_VXGuFpU2SuvGP4_Wb2duyq_52W8Gxvm-x1IA&oe=665FCE0C" alt="Picture 2">
+                                        </div>
+                                        <div class="picture-card">
+                                            <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/440281942_744190921201921_3708938490016391452_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG_G9T6ao6YRvaX6S7svFFzXVYfsPSVgYZdVh-w9JWBhlTLVnlnPW_AfFgcM4nnVTJfcz-NGtrdMNlPy6MCk-IQ&_nc_ohc=HhAvVJ7VKOcQ7kNvgEwpDEt&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QE61AjivLkBRsfZK8EJwbiF0aT84uJqkfmeBkcQ6QrS5Q&oe=665FAE61" alt="Picture 2">
+                                            </div>
+                                            <div class="picture-card">
+                                                <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t1.15752-9/437747905_1654745651942377_6958269431381624603_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFOLU8OxsXpUos_-65azCfhjKu58tWgZxqMq7ny1aBnGq_HH3HYEQpajk6pqXZLtEgB9_8BDc71lHpoV_HJvjTB&_nc_ohc=wo3rhjgYzZAQ7kNvgGBxA_i&_nc_oc=Adg505ZPqLtPHZ-YlAjmpon2a1hVEvZNGggPqhOAOpg6iQzaIRaB6udECCCFs0zZTFs&_nc_ht=scontent.fmnl17-4.fna&oh=03_Q7cD1QG9IUB0tGXS8VblPm3vzM3NFe5niMJBHoz9JABmesp1FQ&oe=665FDCF8" alt="Picture 2">
+                                                </div>
+                                                <div class="picture-card">
+                                                    <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/440074911_422796864026909_1392559644951643231_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFgpSGUXBrIz2zfBlAbiFZogbAF547lqPGBsAXnjuWo8QOWqaQHTS0uA7_2TPQ0jIg2uSwfteDsTmt4WGtPi8mR&_nc_ohc=Nqfc7S_TsiYQ7kNvgE8Lqto&_nc_oc=AdgM6eKm7O0u1Im5wxcAuX5zsBh1CsY-QWtqUzBma2ocjRy_5e5UvegyULMTHeeiVj0&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QEiJloU8DcG3UwybU2q1SCl4uY8pXC-nbFEaHoPyoU3ow&oe=665FD6A7" alt="Picture 2">
+                                                    </div>
+                                                    <div class="picture-card">
+                                                        <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/440548087_1117347052715067_408246194953146569_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFSMwXSkSEO0oa2JBr9F98Yt90QgW0Hz1i33RCBbQfPWG-bZvbUqoE2rPhThWlW6j_mHJgpjQ7NR6TYe504oYbY&_nc_ohc=THw1VwbizbQQ7kNvgF5o-eZ&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QGLphNkL_K3ldL3557ZTYZXF0rAGqVqQu1CLQ_lC3on_Q&oe=665FCF83" alt="Picture 2">
+                                                        </div>
+                                                        <div class="picture-card">
+                                                            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/440392462_478251764543901_4894616360989582140_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFkOEOOevtafUnyN4ivQSDaP4xoWRLrtfA_jGhZEuu18GTtiXRgZl_sik9CjAlENywXXzM4sb49JrIWQqlSwzYR&_nc_ohc=qITo4IovJysQ7kNvgH6PWmB&_nc_ht=scontent.fmnl17-1.fna&oh=03_Q7cD1QHmH0HERl5aOATGKOZfkG4mBCpTaLFizzot2QOXwcwABg&oe=665FCE3B" alt="Picture 2">
+                                                            </div>
+                                                            <div class="picture-card">
+                                                                <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/439328730_1138745327318093_4310333431168542123_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFU93-IngmDNGdXYm6X7nCE53au9N2xCQPndq703bEJA7mn0tkSUBnw_HCWym4ynMBd7XOybwJkQAh4APo_bQGt&_nc_ohc=N5rNMv0tpaoQ7kNvgGRM9f5&_nc_oc=Adi9SG7g3lhrYARMLY_KKmuUFv-G0w4gjy3MIBWjiXnq0CB86qbk3kGwtJYMDgFAtyc&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QE_r_RjQEaReKGN2SK5_Loum7Gzkt0tQ8tfypvW-yHtDQ&oe=665FC866" alt="Picture 2">
+                                                                </div>
+                                                                <div class="picture-card">
+                                                                    <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/441963971_776941417911287_3572729048963573381_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFLbKPbQ4uJFe6r1JLAUmmMxnX5tQAvfe_Gdfm1AC997yW6M87wfzo7p4-0g3I4vi-B3P9j2HyzYJ1ANHFrMAil&_nc_ohc=xIudeTsXieUQ7kNvgH89Uvl&_nc_ht=scontent.fmnl17-2.fna&oh=03_Q7cD1QGWj1Le2a6E6yCCOw4hJcIZxT40bPzVHCG_p8NvvrKmZg&oe=665FE042" alt="Picture 2">
+                                                                    </div>
+                                                                    <div class="picture-card">
+                                                                        <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/440551966_924583882801516_2417522705601828026_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG4fAYjxje45ks1-YjYz_M1eTq-OVAsZ0h5Or45UCxnSFGZb1wkYw5c5RTvN8QjTJoMZp4sy_Wg0d_r52RX8C8y&_nc_ohc=nChM0qhhKasQ7kNvgEvG5ob&_nc_ht=scontent.fmnl17-2.fna&oh=03_Q7cD1QG_lFEG9F4UueAFeXN7PxRCBU7s8zI_gm0rXU-avHVAZw&oe=665FC15A" alt="Picture 2">
+                                                                        </div>
+                                                                        <div class="picture-card">
+                                                                            <img src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t1.15752-9/439397957_290546467346195_2851274507465344773_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGsUs_s8V3u1FX55AcQJSg1uT0ZRg9tlYy5PRlGD22VjH8PRmirGrwFnbqMNi-HpzkpjJEAqB-677yW8jSvJFAE&_nc_ohc=fyiGepVft34Q7kNvgHCjlhi&_nc_ht=scontent.fmnl17-1.fna&oh=03_Q7cD1QE4m7LdldFl6Ui1foz4bLDCrhGQ9Ixx69xJ7m2a3Zw8TQ&oe=665FCB72" alt="Picture 2">
+                                                                            </div>
+                                                                            <div class="picture-card">
+                                                                                <img src="https://scontent.fmnl17-4.fna.fbcdn.net/v/t1.15752-9/440409471_760111519584459_5605257334499868615_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGylKb1NHR_G3irtNAkDB-P7UYO_9skn4btRg7_2ySfhlPhhK6UPaD823U4yNKjyOvfjTG1gNxc_0pfphhp-Oqa&_nc_ohc=RFP0E7PaVRoQ7kNvgGWr65W&_nc_ht=scontent.fmnl17-4.fna&oh=03_Q7cD1QF28CZKZl382dY8DCXWPFuSNd5IMKqqhp8x07xMzzwYqg&oe=665FC111" alt="Picture 2">
+                                                                                </div>
+                                                                                <div class="picture-card">
+                                                                                    <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/440263232_985665549631017_5995793216799166868_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeHeIePms-Bj9JQM_H9tCJUBvhuh_tnUU8S-G6H-2dRTxC_Xa9-qaf3_FNviYI1z_Ogk-fBQKKdtpuEtWxeAVfaZ&_nc_ohc=pZnB-5wETGUQ7kNvgEtGx6K&_nc_ht=scontent.fmnl17-2.fna&oh=03_Q7cD1QHhw6g5iKK7P2GsJwWRGK7B4t4LjD23NIZgdsSh7q9h3w&oe=665FBDB3" alt="Picture 2">
+                                                                                    </div>
+                                                                                    <div class="picture-card">
+                                                                                        <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/440404641_453115510559104_4143533785517079996_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGurNiLEmu15Q104gAXvi1BbfTQSPvd-pBt9NBI-936kJY0jbyCv1oLYYTCWSOMEFatkpt2Xv4H2HUw2V6oW-PJ&_nc_ohc=O_mXwEzrCZQQ7kNvgFy9fHw&_nc_ht=scontent.fmnl17-2.fna&oh=03_Q7cD1QFvuDfYnqhWOX9HHKw9qDtqzsfnzvHin1ED8lY89nWzcw&oe=665FC47F" alt="Picture 2">
+                                                                                        </div>
+                                                                                        <div class="picture-card">
+                                                                                            <img src="https://scontent.fmnl17-5.fna.fbcdn.net/v/t1.15752-9/439227940_965805848252378_367265092585082842_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFY1iATJAwAfsGg7mP9D4VqmNBOcV6SmueY0E5xXpKa5-tNZTRDknx2lH9eDFX37TYO2dqgb-zsg-wVZ8vbKc92&_nc_ohc=fA8YDmipWN8Q7kNvgEDCeao&_nc_ht=scontent.fmnl17-5.fna&oh=03_Q7cD1QHGIfwZ3wW2HzKCbPMGHbTUsjHLvhLfh_BRqyO-SqVppA&oe=665FE414" alt="Picture 2">
+                                                                                            </div>
+
+                                                                                            <div class="picture-card">
+                                                                                                <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/440284041_1200062381161084_4212188544594384692_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEGjA_A_URTHjst7YAxzJaiBO2W9SmgLjgE7Zb1KaAuOFlp8uXCWYZFDbH3haFVzrB_6YRrzxKcx9szKqT4cpQ2&_nc_ohc=YogM-_R5vMsQ7kNvgGmNytV&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QFPDpAJBXKCz171CFaOSMcF84nJutSEC_eXLKNFk7rp_w&oe=665FB8A3" alt="Picture 2">
+                                                                                                </div>
+
+                                                                                                <div class="picture-card">
+                                                                                                    <img src="https://scontent.fmnl17-2.fna.fbcdn.net/v/t1.15752-9/419204396_6931663050289624_3140430602406958412_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEyZTyyoB6675eeax8Y9NJvRmpqp56ccDtGamqnnpxwO56-q2Te3alF5aDQct_IUonQJRzai5k6RXhJJTdY3ibM&_nc_ohc=QcaqLYCRSZYQ7kNvgGBuT-U&_nc_ht=scontent.fmnl17-2.fna&oh=03_Q7cD1QG4_WFYFc6NmBMG4ZmC-0WTJxMBObOVjyDELSO8fV659w&oe=665FB77F" alt="Picture 2">
+                                                                                                    </div>
+                                                                                                    <div class="picture-card">
+                                                                                                        <img src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t1.15752-9/431608380_1129793818021116_1426755017850172900_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeG7M-KctIOKrGcao537Uq4fQOcL3nG5v7BA5wvecbm_sLAA74TSDT_Wfmdp4TlUIcXqlt3NYx-3LojU0V7OWZby&_nc_ohc=X5rGHM-SvsQQ7kNvgHhfq4X&_nc_ht=scontent.fmnl17-3.fna&oh=03_Q7cD1QG-fDqQAxCca8cprZ10_QCeg8q69sbt0_L8Qf1HmOupeg&oe=665FBF90" alt="Picture 2">
+                                                                                                        </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Kate Ann Cui Supilanas</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/kithchen.yyy"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/kith_ahn/"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@kithskwii?lang=en"><i class="fab fa-tiktok"></i></a>
+  </div>
+</footer>
+
+<script>
+  // Get the hamburger button and the navigation menu
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('nav ul');
+
+  // Add a click event listener to the hamburger button
+  hamburger.addEventListener('click', () => {
+    // Toggle the 'active' class on the hamburger button
+    hamburger.classList.toggle('active');
+
+    // Toggle the 'active' class on the navigation menu
+    navMenu.classList.toggle('active');
+  });
+
+  // Add event listeners for smooth scrolling
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+
+  // Add event listener for form submission
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Add your form submission logic here
+    alert('Form submitted successfully!');
+    form.reset();
+  });
+</script>
